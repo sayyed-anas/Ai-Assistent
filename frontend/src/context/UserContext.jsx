@@ -15,7 +15,7 @@ const UserContext = ({ children }) => {
 
   const navigate = useNavigate();
 
-  const serverUrl = "http://localhost:4001";
+  const serverUrl = "https://sanskvirtual-assistantbackend.onrender.com";
 
   const handleCurrentUser = async () => {
     setLoading(true);
