@@ -8,11 +8,17 @@ import Home from "./pages/Home";
 import Customize from "./pages/Customize";
 import NotFound from "./components/NotFound";
 import Customize2 from "./pages/Customize2";
+import spinner from "./assets/spinner.gif";
 
 function App() {
   const { userData, loading } = useContext(userDataContext);
 
-  if (loading) return <div>Loading.........</div>;
+  if (loading)
+    return (
+      <div className="w-[100vw] h-[100vh] bg-[black] flex items-center justify-center">
+        <img src={spinner} alt="Spinner" />
+      </div>
+    );
 
   return (
     <>
