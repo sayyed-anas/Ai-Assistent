@@ -13,7 +13,7 @@ import spinner from "./assets/spinner.gif";
 function App() {
   const { userData, loading } = useContext(userDataContext);
 
-  if (userData)
+  if (loading)
     return (
       <div className="w-[100vw] h-[100vh] bg-[black] flex items-center justify-center">
         <img src={spinner} alt="Spinner" />
