@@ -20,6 +20,7 @@ const UserContext = ({ children }) => {
   const handleCurrentUser = async () => {
     setLoading(true);
     try {
+      if (userData) return;
       const currentUser = await axios.get(`${serverUrl}/api/user/current`, {
         withCredentials: true,
       });
