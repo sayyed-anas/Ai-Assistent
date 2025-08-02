@@ -26,7 +26,7 @@ const Home = () => {
   const handleLogout = async () => {
     try {
       setUserData(null);
-      const result = await axios(`${serverUrl}/api/auth/logout`, {
+      const result = await axios.get(`${serverUrl}/api/auth/logout`, {
         withCredentials: true,
       });
       toast.success(result.data.message);
